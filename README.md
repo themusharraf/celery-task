@@ -82,3 +82,44 @@ Agar task natijalarini Redis’da saqlamoqchi bo‘lsangiz, celery konfiguratsiy
 app = Celery('tasks', broker='redis://localhost:6379/0', backend='redis://localhost:6379/0')
 ```
 Bu bilan, Celery avtomatik ravishda Redis’da task natijasini saqlaydi va uni `AsyncResult` orqali olish mumkin bo'ladi.
+
+
+Redis’ni Docker orqali olish va ishga tushirish juda oddiy. Quyidagi qadamlarni bajaring:
+
+Redis image’ni olish:
+
+bash
+Copy code
+docker pull redis
+Bu buyruq Docker Hub’dan Redis image’ni yuklab oladi.
+
+Redis konteynerini ishga tushirish:
+
+Oddiy Redis serverni ishlatish uchun quyidagi buyruqdan foydalaning:
+
+bash
+Copy code
+docker run --name my-redis -d redis
+Bu yerda:
+
+--name my-redis – konteyner nomini my-redis deb belgilaydi.
+-d – konteynerni “detached” rejimda (fonda) ishlatadi.
+Redis server uchun maxsus portni ochish (masalan, 6379):
+
+Agar konteyneringizni serveringizga yoki mahalliy tarmoqqa ulashni xohlasangiz, Redis portini ochishingiz mumkin:
+
+bash
+Copy code
+docker run --name my-redis -p 6379:6379 -d redis
+Bu Redis serverini mahalliy 6379-port orqali ochadi va u orqali redis-cli yoki boshqa Redis mijozi bilan ulanish mumkin bo‘ladi.
+
+Redis bilan ulanish:
+
+Konteyner ichida Redis bilan ulanish uchun quyidagi buyruqdan foydalanishingiz mumkin:
+
+```bash
+docker exec -it my-redis redis-cli
+```
+Bu sizni Redis CLI ichiga olib kiradi, va bu yerdan Redis buyruqlarini yuborishingiz mumkin.
+
+Redis’ni Docker orqali ishlatish shunday sodda!

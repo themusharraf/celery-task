@@ -84,9 +84,9 @@ app = Celery('tasks', broker='redis://localhost:6379/0', backend='redis://localh
 Bu bilan, Celery avtomatik ravishda Redis’da task natijasini saqlaydi va uni `AsyncResult` orqali olish mumkin bo'ladi.
 
 
-Redis’ni Docker orqali olish va ishga tushirish juda oddiy. Quyidagi qadamlarni bajaring:
+### Redis’ni Docker orqali olish va ishga tushirish juda oddiy. Quyidagi qadamlarni bajaring:
 
-Redis image’ni olish:
+    Redis image’ni olish:
 
 ```bash
 docker pull redis

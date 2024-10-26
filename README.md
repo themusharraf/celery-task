@@ -82,7 +82,19 @@ Agar task natijalarini Redis’da saqlamoqchi bo‘lsangiz, celery konfiguratsiy
 app = Celery('tasks', broker='redis://localhost:6379/0', backend='redis://localhost:6379/0')
 ```
 Bu bilan, Celery avtomatik ravishda Redis’da task natijasini saqlaydi va uni `AsyncResult` orqali olish mumkin bo'ladi.
+### Worker va Beat oynalari:
 
+`celery -A tasks worker --loglevel=info` buyrug‘ini yangi terminal oynasida ishga tushiring.
+`celery -A tasks beat --loglevel=info` buyrug‘ini yana bir terminal oynasida ishga tushiring.
+Har ikki terminal oynasini ochganingizdan so‘ng, worker oynasida `print_message` taski har 3 soniyada "Salom, janob" xabarini chiqaradi.
+
+Worker terminal oynasidagi natija: Har 3 soniyada quyidagicha chiqishni ko‘rishingiz kerak:
+
+```bash
+[2024-10-26 10:30:03,123: INFO/MainProcess] Task tasks.print_message[123abc45-def6-789g-hijk-1234567lmnop] succeeded in 0.0010s: None
+Salom, janob
+```
+Agar boshqa joyda, masalan, log faylda yoki ma'lum bir UIda xabarni ko‘rishni istasangiz, print o‘rniga `log-faylga` yozish uchun `logging` kutubxonasidan yoki ma’lumotlar bazasiga saqlash uchun `database` funksiyalaridan foydalanishingiz mumkin.
 
 ### Redis’ni Docker orqali olish va ishga tushirish juda oddiy. Quyidagi qadamlarni bajaring:
 

@@ -84,8 +84,9 @@ app = Celery('tasks', broker='redis://localhost:6379/0', backend='redis://localh
 Bu bilan, Celery avtomatik ravishda Redis’da task natijasini saqlaydi va uni `AsyncResult` orqali olish mumkin bo'ladi.
 ### Worker va Beat oynalari:
 
-`celery -A tasks worker --loglevel=info` buyrug‘ini yangi terminal oynasida ishga tushiring.
-`celery -A tasks beat --loglevel=info` buyrug‘ini yana bir terminal oynasida ishga tushiring.
+1. `celery -A tasks worker --loglevel=info` buyrug‘ini yangi terminal oynasida ishga tushiring.
+
+2. `celery -A tasks beat --loglevel=info` buyrug‘ini yana bir terminal oynasida ishga tushiring.
 Har ikki terminal oynasini ochganingizdan so‘ng, worker oynasida `print_message` taski har 3 soniyada "Salom, janob" xabarini chiqaradi.
 
 Worker terminal oynasidagi natija: Har 3 soniyada quyidagicha chiqishni ko‘rishingiz kerak:

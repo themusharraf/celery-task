@@ -88,10 +88,10 @@ Redis’ni Docker orqali olish va ishga tushirish juda oddiy. Quyidagi qadamlarn
 
 Redis image’ni olish:
 
-bash
-Copy code
+```bash
 docker pull redis
-Bu buyruq Docker Hub’dan Redis image’ni yuklab oladi.
+```
+Bu buyruq `Docker Hub`dan Redis image’ni yuklab oladi.
 
 ### Redis konteynerini ishga tushirish:
 

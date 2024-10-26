@@ -55,7 +55,7 @@ celery -A tasks worker --loglevel=info
 
 celery -A tasks beat --loglevel=info
 ````
-Shunday qilib, print_time_task taskimiz har 5 daqiqada bajariladi. Bu usul bilan celery yordamida kerakli vaqtda yoki periodik interval bilan tasklarni bajarishimiz mumkin.
+Shunday qilib, print_message taskimiz har 5 daqiqada bajariladi. Bu usul bilan celery yordamida kerakli vaqtda yoki periodik interval bilan tasklarni bajarishimiz mumkin.
 
 
 ### Task holatini tekshirish

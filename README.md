@@ -93,7 +93,7 @@ Copy code
 docker pull redis
 Bu buyruq Docker Hub’dan Redis image’ni yuklab oladi.
 
-Redis konteynerini ishga tushirish:
+### Redis konteynerini ishga tushirish:
 
 Oddiy Redis serverni ishlatish uchun quyidagi buyruqdan foydalaning:
 

@@ -87,7 +87,7 @@ Bu bilan, Celery avtomatik ravishda Redis’da task natijasini saqlaydi va uni `
 1. `celery -A tasks worker --loglevel=info` buyrug‘ini yangi terminal oynasida ishga tushiring.
 
 2. `celery -A tasks beat --loglevel=info` buyrug‘ini yana bir terminal oynasida ishga tushiring.
-3. 
+
 Har ikki terminal oynasini ochganingizdan so‘ng, worker oynasida `print_message` taski har 3 soniyada "Salom, janob" xabarini chiqaradi.
 
 Worker terminal oynasidagi natija: Har 3 soniyada quyidagicha chiqishni ko‘rishingiz kerak:

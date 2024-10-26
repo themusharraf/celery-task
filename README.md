@@ -113,9 +113,8 @@ Copy code
 docker run --name my-redis -p 6379:6379 -d redis
 Bu Redis serverini mahalliy 6379-port orqali ochadi va u orqali redis-cli yoki boshqa Redis mijozi bilan ulanish mumkin bo‘ladi.
 
-Redis bilan ulanish:
-
-Konteyner ichida Redis bilan ulanish uchun quyidagi buyruqdan foydalanishingiz mumkin:
+### Redis bilan ulanish:
+    Konteyner ichida Redis bilan ulanish uchun quyidagi buyruqdan foydalanishingiz mumkin:
 
 ```bash
 docker exec -it my-redis redis-cli

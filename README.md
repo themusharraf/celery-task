@@ -97,21 +97,21 @@ Redis konteynerini ishga tushirish:
 
 Oddiy Redis serverni ishlatish uchun quyidagi buyruqdan foydalaning:
 
-bash
-Copy code
-docker run --name my-redis -d redis
-Bu yerda:
+```bash
+docker run --name myredis -d redis
+```
 
---name my-redis – konteyner nomini my-redis deb belgilaydi.
--d – konteynerni “detached” rejimda (fonda) ishlatadi.
-Redis server uchun maxsus portni ochish (masalan, 6379):
+Bu yerda:
+`--name myredis` – konteyner nomini my-redis deb belgilaydi.
+`-d` – konteynerni “detached” rejimda (fonda) ishlatadi.
+Redis server uchun maxsus portni ochish (masalan, `6379`):
 
 Agar konteyneringizni serveringizga yoki mahalliy tarmoqqa ulashni xohlasangiz, Redis portini ochishingiz mumkin:
 
 ```bash
 docker run --name myredis -p 6379:6379 -d redis
 ```
-Bu Redis serverini mahalliy 6379-port orqali ochadi va u orqali redis-cli yoki boshqa Redis mijozi bilan ulanish mumkin bo‘ladi.
+Bu Redis serverini mahalliy `6379-port` orqali ochadi va u orqali `redis-cli` yoki boshqa Redis mijozi bilan ulanish mumkin bo‘ladi.
 
 ### Redis bilan ulanish:
     Konteyner ichida Redis bilan ulanish uchun quyidagi buyruqdan foydalanishingiz mumkin:

@@ -108,9 +108,9 @@ Redis server uchun maxsus portni ochish (masalan, 6379):
 
 Agar konteyneringizni serveringizga yoki mahalliy tarmoqqa ulashni xohlasangiz, Redis portini ochishingiz mumkin:
 
-bash
-Copy code
-docker run --name my-redis -p 6379:6379 -d redis
+```bash
+docker run --name myredis -p 6379:6379 -d redis
+```
 Bu Redis serverini mahalliy 6379-port orqali ochadi va u orqali redis-cli yoki boshqa Redis mijozi bilan ulanish mumkin bo‘ladi.
 
 ### Redis bilan ulanish:

@@ -40,7 +40,7 @@ app.conf.beat_schedule = {
 app.conf.timezone = 'Asia/Tashkent'
 
 ```
-Bu yerda Celery dasturini yaratdik, broker sifatida redisni belgiladik. print_time_task esa vaqti oʻzgarib boruvchi oddiy task boʻlib, hozirgi vaqtni konsolga chiqaradi.
+Bu yerda Celery dasturini yaratdik, broker sifatida redisni belgiladik. print_message esa vaqti oʻzgarib boruvchi oddiy task boʻlib, hozirgi vaqtni konsolga chiqaradi.
 
 ### 2. Celery worker ishini boshlash: Bu komanda yordamida worker'ni ishga tushiramiz:
 

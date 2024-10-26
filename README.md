@@ -102,7 +102,7 @@ docker run --name myredis -d redis
 ```
 
 Bu yerda:
-`--name myredis` – konteyner nomini my-redis deb belgilaydi.
+`--name myredis` – konteyner nomini myredis deb belgilaydi.
 `-d` – konteynerni “detached” rejimda (fonda) ishlatadi.
 Redis server uchun maxsus portni ochish (masalan, `6379`):
 
@@ -114,7 +114,7 @@ docker run --name myredis -p 6379:6379 -d redis
 Bu Redis serverini mahalliy `6379-port` orqali ochadi va u orqali `redis-cli` yoki boshqa Redis mijozi bilan ulanish mumkin bo‘ladi.
 
 ### Redis bilan ulanish:
-    Konteyner ichida Redis bilan ulanish uchun quyidagi buyruqdan foydalanishingiz mumkin:
+Konteyner ichida Redis bilan ulanish uchun quyidagi buyruqdan foydalanishingiz mumkin:
 
 ```bash
 docker exec -it my-redis redis-cli
